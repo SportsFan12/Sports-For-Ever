@@ -1,18 +1,20 @@
 h1 {
-  color: green;
   text-align: center;
   padding-top: 50px;
   padding-bottom: 50px;
-  font-size: 70px;
-  font-family: Georgia;
+  font-size: 75px;
+  color: #1FB04F;
+  font-family: 'Coiny', cursive;
+  text-shadow: 4px 4px 4px #aaa;
 }
 
 h2 {
   color: white;
   text-align: block;
-  background-color: green;
+  background-image: linear-gradient(to bottom right, limegreen, seagreen);
   padding: 15px;
-  font-family: Georgia;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
 }
 
 h2:hover {
@@ -23,10 +25,14 @@ h2:hover {
 img {
   max-width: 100%;
   height: auto;
+  display: inline-block;
 }
 
 footer {
   height: 100%;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 h3 {
@@ -34,6 +40,19 @@ h3 {
   color: white;
   text-align: center;
   padding: 10px;
+}
+
+nav {
+  font-size: 18px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color:black;
 }
 
 /* custom sizes for the images used in webpages */
@@ -58,47 +77,49 @@ h3 {
   padding-bottom: 100px;
 }
 
-/* font used for nav and footer */
-.nav-footer-font {
-  font-family: Verdana;
-}
-
-/* padding for form element (log in page) */
-.form-custom {
-  padding-bottom: 156.5px;
-}
-
-/* padding for form element (sign up page) */
-.form-custom-2 {
-  padding-bottom: 40px;
-}
-
-/* font for article heading */
-.article-font {
-  font-size: 50px;
-  font-family: Georgia;
-}
-
-/* paragraph style for articles */
-.paragraph-font {
-  font-size: 20px;
-  font-family: Times;
-  padding-bottom: 30px;
-  color: black;
-}
-
-/* paragraph style for author/date */
-.author-date-font {
-  font-size: 30px;
-  font-family: Times;
-  padding-bottom: 20px;
-  color: black;
-  text-align: center;
-}
-
 /* this creates the margin for the final paragraph in articles */
 .article-margin {
   margin-bottom: 75px;
+}
+
+/* dropdown menu background color */
+.navbar-nav > li > .dropdown-menu {
+  background-color: forestgreen;
+}
+
+/* dropdown menu font color */
+.navbar-nav > li > .dropdown-menu a{
+  color: white;
+}
+
+/* dropdown menu hover effect */
+.dropdown-menu a:hover {
+    background-color: forestgreen;
+    background-image: none;
+    text-decoration: underline;
+}
+
+/* navbar and footer background color */
+.navbar-footer-custom {
+  background-color: #136F32;
+}
+
+/* creates zoom effect when mouse hovers over item */
+.zoom:hover {
+  transform: scale(1.05);
+}
+
+/* custom button for forms */
+.custom-button {
+  background-color: #136F32;
+  border: 1px solid #136F32;
+}
+
+/* custom button hover effect */
+.custom-button:hover {
+    background-color: #136F32;
+    border-color: #136F32;
+    transform: scale(1.1);
 }
 
 /*  makes articles single column for smaller screens */
@@ -115,5 +136,29 @@ h3 {
       float: none;
       display: table-cell;
       vertical-align: top;
+  }
+
+  /*  following lines ensures on small screens that the
+      spacing between columns are equal */
+  .col {
+    padding-bottom: 50px;
+  }
+
+  .row-padding {
+    margin-top: -50px;
+  }
+}
+
+/*  makes heading smaller so that it doesn't break page */
+@media (max-width: 460px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+
+/*  makes heading smaller so that it doesn't break page */
+@media (max-width: 300px) {
+  h1 {
+    font-size: 40px;
   }
 }
